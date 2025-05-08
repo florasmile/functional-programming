@@ -3,6 +3,9 @@
 # one. (assume no ties)
 
 
+from curses.ascii import isalpha
+
+
 def shortest_word(words):
     return min(words, key=len)
 
@@ -53,4 +56,4 @@ def report(word, function, function_name):
 
 
 def sorted_valid_passwords(passwords):
-    pass
+    return sorted(filter(lambda x: not x.isalpha(), passwords), key=len)
