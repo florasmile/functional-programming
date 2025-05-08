@@ -32,7 +32,7 @@ def even_nums(nums):
 
 
 def squares(nums):
-    pass
+    return list(map(lambda x: x * x, nums))
 
 
 # Wave 4
@@ -42,7 +42,8 @@ def squares(nums):
 
 
 def report(word, function, function_name):
-    pass
+    result = function(word)
+    return(f"The result of applying {function_name} to {word} is {result}")
 
 
 # Wave 5
